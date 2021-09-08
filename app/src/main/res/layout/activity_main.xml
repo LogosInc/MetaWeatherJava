@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/btnGetCityID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/darkerGray"
+        android:text="Get City ID"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnGetWeatherByCityID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/darkerGray"
+        android:text="By City ID"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/btnGetWeatherByCityName"
+        app:layout_constraintStart_toEndOf="@+id/btnGetCityID"
+        app:layout_constraintTop_toTopOf="@+id/btnGetCityID" />
+
+    <Button
+        android:id="@+id/btnGetWeatherByCityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/darkerGray"
+        android:text="By City Name"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnGetWeatherByCityID" />
+
+    <EditText
+        android:id="@+id/etDataInPut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="City Name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/btnGetWeatherByCityName"
+        app:layout_constraintStart_toStartOf="@+id/btnGetCityID"
+        app:layout_constraintTop_toBottomOf="@+id/btnGetWeatherByCityID"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ListView
+        android:id="@+id/lvWeatherReports"
+        android:layout_width="409dp"
+        android:layout_height="601dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/etDataInPut"
+        app:layout_constraintStart_toStartOf="@+id/etDataInPut"
+        app:layout_constraintTop_toBottomOf="@+id/etDataInPut"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
